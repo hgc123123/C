@@ -1,3 +1,6 @@
+友元函数定义在类的外部，也可定义在类内，但是不属于类的成员，友元函数可以访问类的private和protect成员。
+
+
 [hpc@node029 C++]$ cat test.cpp 
 #include<iostream>
 using namespace std;
