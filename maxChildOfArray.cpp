@@ -19,6 +19,7 @@ int maxChildOfArray(vector<int> arr ){
         if(max<temp[l])
             max=temp[l];
     }
+    delete []temp;
     return max;
 }
 
