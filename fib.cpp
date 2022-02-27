@@ -34,7 +34,7 @@ int main(){
 }
 
 
-[hpchgc@cas298 C_test]$ ./fib
+[hpc@cas298 C_test]$ ./fib
 输入n:
 6
 1 2 3 5 5
