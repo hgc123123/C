@@ -1,0 +1,5 @@
+g++  -c -fPIC  -o library.o maxChildNumOfArray.cpp
+g++ -shared -o liblibrary.so library.o
+g++ -L. -Wall -o code main.cpp -llibrary
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lustre/home/data
+./code
