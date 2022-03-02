@@ -1,3 +1,6 @@
+#ifndef MAXCHILD_H
+#define MAXCHILD_H
+
 #include <iostream>
 #include <vector>
 #include "maxChildNumOfArray.h"
@@ -15,4 +18,4 @@ int main(){
     cout<<"Max Child of Array: "<<maxChild.maxChildNumOfArray(maxChild.vec)<<endl;
     return 0;
 }
-
+#endif
