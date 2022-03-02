@@ -1,0 +1,2 @@
+g++ -shared -fPIC -o libqueue.so queue.cpp
+g++ -Wall -o main main.cpp -L. -lqueue
