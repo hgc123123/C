@@ -1,9 +1,9 @@
 #include <iostream>
 #include <vector>
-#include "maxChildNumOfArray.h"
+#include "dynamic.h"
 using namespace std;
 
-int MaxChildNumOfArray::maxChildNumOfArray(vector<int> vec){
+int Dynamic::maxChildNumOfArray(vector<int> vec){
     int size=vec.size();
     int *temp=new int [size];
     for (int i = 0; i < size; ++i) {
@@ -21,5 +21,21 @@ int MaxChildNumOfArray::maxChildNumOfArray(vector<int> vec){
             max=temp[i];
     }
     delete []temp;
+    return max;
+}
+int Dynamic::maxContinueArraySum(vector<int> vec){
+    int size=vec.size();
+    int sum=vec[0];
+    int max=vec[0];
+    for (int i = 1; i < size; ++i) {
+        if(sum+vec[i]>vec[i]){
+            sum=sum+vec[i];
+        }else{
+            sum=vec[i];
+        }
+        if(sum>max){
+            max=sum;
+        }
+    }
     return max;
 }

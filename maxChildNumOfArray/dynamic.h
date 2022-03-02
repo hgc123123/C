@@ -2,9 +2,9 @@
 #include <vector>
 using namespace std;
 
-class MaxChildNumOfArray{
+class Dynamic{
 public:
     int maxChildNumOfArray(vector<int> vec);
-
+    int maxContinueArraySum(vector<int> vec);
     vector<int> vec;
 };

@@ -1,3 +1,20 @@
+recent:
+g++ -shared -fPIC -o libdynamic.so dynamic.cpp
+g++ -Wall -o main main.cpp -ldynamic
+
+[hpc@cas361 hu]$ ./main
+Input a array of int:
+3 4 5 6 -2 -3 6
+Max Child of Array: 4
+Max Continue Sum Array:
+19
+
+
+
+
+
+
+
 方法一
 g++  -c -fPIC  -o library.o maxChildNumOfArray.cpp
 g++ -shared -o liblibrary.so library.o
