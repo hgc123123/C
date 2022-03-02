@@ -1,3 +1,4 @@
+方法一
 g++  -c -fPIC  -o library.o maxChildNumOfArray.cpp
 g++ -shared -o liblibrary.so library.o
 g++ -L. -Wall -o code main.cpp -llibrary
