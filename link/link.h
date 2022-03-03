@@ -13,6 +13,8 @@ struct ListNode{
 class Link {
 public:
     bool isEmpty(ListNode *head);
+    void insertNode(ListNode *head, double x);
+    void travelNode(ListNode *head);
     ListNode *head;
 };
 

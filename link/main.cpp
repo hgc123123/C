@@ -6,16 +6,14 @@
 #include <iostream>
 using namespace std;
 int main(){
-    Link link;
     ListNode *head=NULL;
     head=new ListNode;
-    head->value=1.0;
+    head->value=0.0;
     head->next=NULL;
+
+    Link link;
     link.head=head;
-    if(link.isEmplty(head)){
-        cout<<"is empty"<<endl;
-    }else{
-        cout<<"is not empty"<<endl;
-    }
+    link.insertNode(link.head,2.0);
+    link.travelNode(link.head);
     return 0;
 }
