@@ -39,5 +39,18 @@ int main(){
         delete []n[i];
     }
     delete []n;
+
+    Dynamic dynamic;
+    string str1;
+    string str2;
+    cout<<"input str1: "<<endl;
+    getline(cin,str1);
+    dynamic.str1=str1;
+    cout<<"input str2: "<<endl;
+    getline(cin,str2);
+    dynamic.str2=str2;
+
+    cout<<"compare two string, the result is: "<<endl;
+    cout<<dynamic.maxTwoArraySameOrderMethod(dynamic.str1,dynamic.str2);
     return 0;
 }
