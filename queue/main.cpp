@@ -3,7 +3,8 @@
 #include <vector>
 using namespace std;
 int main(){
-    Queue insert;
+    //Queue insert;
+    Queue shell;
     vector<int> arr;
     for (int temp = 0; cin>>temp ; ) {
         arr.push_back(temp);
@@ -11,13 +12,19 @@ int main(){
             break;
         }
     }
-    insert.arr=arr;
     int size=arr.size();
+    /*
+    insert.arr=arr;
     cout<<"insert queue: "<<endl;
     insert.insertQueue(insert.arr);
     cout<<"afer queue: "<<endl;
+    */
+    shell.arr=arr;
+    cout<<"execute shell queue: "<<endl;
+    shell.shellQueue(shell.arr);
+    cout<<"afer shell queue: "<<endl;
     for (int i = 0; i < size; ++i) {
-        cout<<insert.arr[i]<<" ";
+        cout<<shell.arr[i]<<" ";
     }
     cout<<endl;
     return 0;
