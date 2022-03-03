@@ -21,7 +21,6 @@ void Queue::insertQueue(vector<int> &arr){
     }
     cout<<endl;
 }
-
 void Queue::shellQueue(vector<int> &arr){
     int size=arr.size();
     int temp;
@@ -38,3 +37,31 @@ void Queue::shellQueue(vector<int> &arr){
         gap/=2;
     }
 }
+void Queue::quickQueue(vector<int> &arr,int l,int r){
+    int i,j;
+    i=l;
+    j=r;
+    int temp=arr[l];
+    while(i<j){
+        while(temp<arr[j]&&i<j){
+            --j;
+        }
+        if(i<j){
+            arr[i]=arr[j];
+            ++i;
+        }
+        while(temp>arr[i]&&i<j){
+            ++i;
+        }
+        if(i<j){
+            arr[j]=arr[i];
+            --j;
+        }
+    }
+    arr[i]=temp;
+    if(l<i)
+        quickQueue(arr,l,j-1);
+    if(i<r)
+        quickQueue(arr,j+1,r);
+}
+
