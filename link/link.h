@@ -15,6 +15,7 @@ public:
     bool isEmpty(ListNode *head);
     void insertNode(ListNode *head, double x);
     void travelNode(ListNode *head);
+    void deleteNode(ListNode *head, double x);
     ListNode *head;
 };
 

@@ -34,3 +34,18 @@ void Link::travelNode(ListNode *head){
         }
     }
 };
+void Link::deleteNode(ListNode *head,double x){
+    if(head->next==NULL){
+        return;
+    }else{
+        ListNode *delNode=NULL;
+        ListNode *pre=NULL;
+        pre=head;
+        while(pre->next->value!=x){
+            pre=pre->next;
+        }
+        delNode=pre->next;
+        pre->next=delNode->next;
+        delete delNode;
+    }
+}

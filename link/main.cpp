@@ -15,11 +15,19 @@ int main(){
 
     Link link;
     link.head=head;
+    /*
     srand((unsigned)time(NULL));
     for (int i = 0; i < 5; ++i) {
         double val=(rand()/(double)RAND_MAX);
         link.insertNode(link.head,val);
     }
+    */
+    for (int i = 0; i < 8; ++i) {
+        link.insertNode(link.head,i);
+    }
+    link.travelNode(link.head);
+    cout<<"delete node:"<<endl;
+    link.deleteNode(link.head,5);
     link.travelNode(link.head);
     return 0;
 }
