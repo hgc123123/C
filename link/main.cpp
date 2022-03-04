@@ -4,6 +4,8 @@
 
 #include "link.h"
 #include <iostream>
+#include<stdlib.h>
+#include <omp.h>
 using namespace std;
 int main(){
     ListNode *head=NULL;
@@ -13,7 +15,11 @@ int main(){
 
     Link link;
     link.head=head;
-    link.insertNode(link.head,2.0);
+    srand((unsigned)time(NULL));
+    for (int i = 0; i < 5; ++i) {
+        double val=(rand()/(double)RAND_MAX);
+        link.insertNode(link.head,val);
+    }
     link.travelNode(link.head);
     return 0;
 }
