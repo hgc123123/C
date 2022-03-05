@@ -49,3 +49,73 @@ void Link::deleteNode(ListNode *head,double x){
         delete delNode;
     }
 }
+bool DoubleLink::isEmpty(doubleLinkNode *head){
+    if(head->next==NULL){
+        return true;
+    }else{
+        return false;
+    }
+}
+void DoubleLink::insertNode(doubleLinkNode *head,double x){
+    doubleLinkNode *last=NULL;
+    last=head;
+
+    cout<<"1.7"<<endl;
+    while(last->next!=head){
+        cout<<"1.8"<<endl;
+        last=last->next;
+    }
+
+    doubleLinkNode *node=new doubleLinkNode;
+    node->value=x;
+    node->next=NULL;
+    node->pre=NULL;
+
+    last->next=node;
+    node->pre=last;
+    node->next=head;
+    head->pre=node;
+}
+void DoubleLink::travelNode(doubleLinkNode *head){
+    if(head->next==head){
+        return;
+    }else{
+        doubleLinkNode *last=NULL;
+        last=head;
+        while(last->next!=head){
+            last=last->next;
+            cout<<last->value<<" ";
+        }
+        cout<<endl;
+    }
+}
+void DoubleLink::deleteNode(doubleLinkNode *head, double x){
+    if(head->next==NULL){
+        return;
+    }else{
+        doubleLinkNode *pre,*tar;
+        pre=NULL;
+        tar=NULL;
+        tar=head;
+        while(tar->next!=head){
+            tar=tar->next;
+            if(tar->value==x){
+                pre=tar->pre;
+                pre->next=tar->next;
+                tar->next->pre=pre;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
