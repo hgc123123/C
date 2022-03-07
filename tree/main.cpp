@@ -21,6 +21,14 @@ int main(){
     binaryTree.root=NULL;
 
     binaryTree.root=binaryTree.createBTree(binaryTree.root,vec);
+    cout<<"Pre Order: "<<endl;
     binaryTree.preOrder(binaryTree.root);
+    cout<<endl;
+    cout<<"In Order: "<<endl;
+    binaryTree.inOrder(binaryTree.root);
+    cout<<endl;
+    cout<<"Post Order: "<<endl;
+    binaryTree.postOrder(binaryTree.root);
+    cout<<endl;
     return 0;
 }

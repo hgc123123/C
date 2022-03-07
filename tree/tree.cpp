@@ -37,8 +37,22 @@ BTNode* BinaryTree::createBTree(BTNode *root,vector<int> &arr){
 }
 void BinaryTree::preOrder(BTNode *root){
     if(root!=NULL){
-        cout<<root->value<<" "<<endl;
+        cout<<root->value<<" ";
         preOrder(root->lchild);
         preOrder(root->rchild);
+    }
+}
+void BinaryTree::inOrder(BTNode *root){
+    if(root!=NULL){
+        preOrder(root->lchild);
+        cout<<root->value<<" ";
+        preOrder(root->rchild);
+    }
+}
+void BinaryTree::postOrder(BTNode *root){
+    if(root!=NULL){
+        preOrder(root->lchild);
+        preOrder(root->rchild);
+        cout<<root->value<<" ";
     }
 }

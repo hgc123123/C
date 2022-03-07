@@ -14,6 +14,8 @@ class BinaryTree {
 public:
     BTNode *createBTree(BTNode *root, vector<int> &arr);
     void preOrder(BTNode *root);
+    void inOrder(BTNode *root);
+    void postOrder(BTNode *root);
     BTNode *root;
 };
 
