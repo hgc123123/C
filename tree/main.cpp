@@ -40,5 +40,10 @@ int main(){
     BTNode *targetNode=new BTNode;
     targetNode=binaryTree.targetNode(binaryTree.root,8);
     cout<<targetNode->value<<endl;
+    cout<<"travel tree levely: "<<endl;
+    BinaryTree btree;
+    btree.root=NULL;
+    BTNode *totalTree=binaryTree.createTotalBTree(btree.root,vec);
+    binaryTree.levelTree(totalTree);
     return 0;
 }

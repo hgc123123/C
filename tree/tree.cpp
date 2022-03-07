@@ -92,8 +92,49 @@ BTNode* BinaryTree::targetNode(BTNode *root,int key){
         return targetNode(root->rchild,key);
     }
 }
-
-
+BTNode* BinaryTree::createTotalBTree(BTNode *root,vector<int> &arr){
+    int size=arr.size();
+    BTNode *parentNode=new BTNode;
+    BTNode *currentNode=NULL;
+    BTNode **nodes=new BTNode*[size+1];
+    int front,rear;
+    front=rear=0;
+    root=new BTNode;
+    root->value=arr[0];
+    root->lchild=root->rchild=NULL;
+    parentNode=root;
+    for (int i = 1; i < size; ++i) {
+        currentNode=new BTNode;
+        currentNode->value=arr[i];
+        currentNode->lchild=NULL;
+        currentNode->rchild=NULL;
+        nodes[++rear]=currentNode;
+        if(parentNode->lchild==NULL){
+            parentNode->lchild=currentNode;
+        }else{
+            parentNode->rchild=currentNode;
+            parentNode=nodes[++front];
+        }
+    }
+    delete []nodes;
+    return root;
+}
+void BinaryTree::levelTree(BTNode *root){
+    int front,rear;
+    front=rear=0;
+    BTNode *p=new BTNode;
+    BTNode **nodes=new BTNode*[8];
+    nodes[++rear]=root;
+    while(front-rear){
+        p=nodes[++front];
+        cout<<p->value<<endl;
+        if(p->lchild)
+            nodes[++rear]=p->lchild;
+        if(p->rchild)
+            nodes[++rear]=p->rchild;
+    }
+    delete []nodes;
+}
 
 
 

@@ -19,6 +19,8 @@ public:
     int countLeafNode(BTNode *root);
     int levelOfTree(BTNode *root);
     BTNode *targetNode(BTNode *root,int key);
+    BTNode *createTotalBTree(BTNode *root,vector<int> &arr);
+    void levelTree(BTNode *root);
     BTNode *root;
 };
 
