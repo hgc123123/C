@@ -30,5 +30,15 @@ int main(){
     cout<<"Post Order: "<<endl;
     binaryTree.postOrder(binaryTree.root);
     cout<<endl;
+    cout<<"The leaf nodes is: "<<endl;
+    int countLeafNodes=binaryTree.countLeafNode(binaryTree.root);
+    cout<<countLeafNodes<<endl;
+    cout<<"The level of tree is "<<endl;
+    int levelOfTree=binaryTree.levelOfTree(binaryTree.root);
+    cout<<levelOfTree<<endl;
+    cout<<"The value of TargetNode is: ";
+    BTNode *targetNode=new BTNode;
+    targetNode=binaryTree.targetNode(binaryTree.root,8);
+    cout<<targetNode->value<<endl;
     return 0;
 }

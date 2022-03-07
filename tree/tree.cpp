@@ -56,3 +56,49 @@ void BinaryTree::postOrder(BTNode *root){
         cout<<root->value<<" ";
     }
 }
+int BinaryTree::countLeafNode(BTNode *root){
+    int l1,l2,l;
+    if(root==NULL){
+        return 0;
+    }else{
+        l1=countLeafNode(root->lchild);
+        l2=countLeafNode(root->rchild);
+        l=l1+l2;
+        if((!root->lchild)&&(!root->rchild)){
+            l++;
+        }
+        return l;
+    }
+}
+int BinaryTree::levelOfTree(BTNode *root){
+    int c1,c2,c;
+    if(!root){
+        return 0;
+    }else{
+        c1=levelOfTree(root->lchild);
+        c2=levelOfTree(root->rchild);
+        c=c1>c2?c1:c2;
+        return c+1;
+    }
+}
+BTNode* BinaryTree::targetNode(BTNode *root,int key){
+    if(!root){
+        return NULL;
+    }else if(root->value==key){
+        return root;
+    }else if(root->value<key){
+        return targetNode(root->rchild,key);
+    }else{
+        return targetNode(root->rchild,key);
+    }
+}
+
+
+
+
+
+
+
+
+
+

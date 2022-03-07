@@ -16,6 +16,9 @@ public:
     void preOrder(BTNode *root);
     void inOrder(BTNode *root);
     void postOrder(BTNode *root);
+    int countLeafNode(BTNode *root);
+    int levelOfTree(BTNode *root);
+    BTNode *targetNode(BTNode *root,int key);
     BTNode *root;
 };
 
